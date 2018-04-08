@@ -1,0 +1,56 @@
+@import './mixin.scss';
+@import './funs.scss';
+@import './normalize.css';
+$pink: pink;
+$red: red;
+$rebeccapurple: rebeccapurple;
+$paleturquoise: paleturquoise;
+$moccasin: moccasin;
+$orange: orange;
+#main{
+    .one{
+        background-color: $pink;
+        @include font-dpr(px2rem(14px));
+        @include px-dpr(width,px2rem(100px));
+        @include px-dpr(height,px2rem(100px));
+    }
+    .sidebar { 
+        border: 1px $red solid;
+        @include px-dpr(width,px2rem(100px));
+        @include px-dpr(height,px2rem(100px));
+    }
+    .two{
+        background-color: $rebeccapurple;
+        background: url('../images/t1.jpg') no-repeat top;
+        background-size: 100%;
+        @include font-dpr(px2rem(20px));
+        @include px-dpr(width, px2rem(200px));
+        @include px-dpr(height, px2rem(200px));
+    }
+    .lists ul{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            @include px-dpr(width,px2rem(20px));
+            @include px-dpr(height,px2rem(20px));
+            background-color: $paleturquoise;
+            &:hover{
+                background-color: $moccasin;
+            }
+        }
+    }
+    .vUnit{
+        div{
+            width: 25vw;
+            height: 10vh;
+            float: left;
+            background-color: $orange;
+
+        }
+    }
+}
